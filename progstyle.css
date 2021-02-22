@@ -1,0 +1,75 @@
+.custom-progress {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 10px;
+ 
+    /* Outer bar */
+    border: none;
+    border-radius: 18px;
+    background-color: #17bce6;
+}
+ 
+/**
+ * Webkit
+ */
+ 
+/* Outer bar */
+.custom-progress{
+	
+	
+	
+	
+}
+.custom-progress::-webkit-progress-bar {
+    border-radius: 18px;
+    background-color: #17bce6;
+}
+ 
+/* Inner bar */
+.custom-progress::-webkit-progress-value {
+    border-radius: 18px;
+    background: repeating-linear-gradient(
+        135deg,
+        #606dbc,
+        #606dbc 0px,
+        #19e6d8 0px,
+        #19e6d8 28px
+    );
+
+}
+ 
+/**
+ * Mozilla
+ */
+ 
+/* Inner bar */
+ 
+.custom-progress::-moz-progress-bar {
+    border-radius: 18px;
+    background: repeating-linear-gradient(
+        135deg,
+        #606dbc,
+        #606dbc 0px,
+        #19e6d8 0px,
+        #19e6d8 28px
+    );
+}
+ 
+/**
+ * IE/Edge
+ */
+ 
+ /* Inner bar */
+ 
+.custom-progress::-ms-fill {
+    border-radius: 18px;
+    background: repeating-linear-gradient(
+        135deg,
+        #606dbc,
+        #606dbc 0px,
+        #19e6d8 0px,
+        #19e6d8 28px
+    );
+}

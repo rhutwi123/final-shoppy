@@ -1,0 +1,154 @@
+
+<style>
+
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap');
+
+*{
+  padding: 0px;
+  margin: 0px;
+  font-family: 'Roboto:300', sans-serif;
+  
+}
+
+p{
+  color:#008eb5;
+  font-family: 'Roboto:100', sans-serif;
+}
+
+.main-container{
+  display:flex;
+  justify-content: center;
+  align-items:center;
+  min-width: 100vw;
+  min-height: 100vh;
+  background-image:url("images/order.jpg");
+  padding-top: 25px;
+  padding-bottom: 25px
+}
+
+.sub-container{
+  display:flex;
+  justify-content: space-evenly;
+  align-items:center;
+  padding: 15px;
+  flex-direction:column;
+  height: 100vh;
+}
+
+.glass-morphism-container1{
+  position:relative;
+  background-color: rgba(255, 255, 255,0.2);
+  padding: 60px;
+  color:#008eb5;
+  border-radius: 25px;
+  border: solid 2px transparent;
+   background-clip: padding-box;
+  box-shadow: 10px 10px 10px  rgba(46, 54, 68, 0.03);
+  backdrop-filter: blur(40px);
+}
+
+
+
+.glass-morphism-container2{
+  background-color: rgba(255, 255, 255,0.5);
+  padding: 60px;
+  color:#008eb5;
+  border-radius: 25px;
+  border: solid 2px transparent;
+   background-clip: padding-box;
+  box-shadow: 10px 10px 10px  rgba(46, 54, 68, 0.03);
+  backdrop-filter: blur(30px);
+}
+
+.glass-morphism-container3{
+  background-color: rgba(255, 255, 255,0.6);
+  padding: 60px;
+  color:#008eb5;
+  border-radius: 25px;
+  border: solid 2px transparent;
+   background-clip: padding-box;
+  box-shadow: 10px 10px 10px  rgba(46, 54, 68, 0.03);
+  backdrop-filter: blur(50px);
+}
+
+
+
+.glass-morphism-container-hover-effect{
+  position:relative;
+  background-color: rgba(255, 255, 255,0.1);
+  padding: 60px;
+  color:#008eb5;
+  border-radius: 25px;
+  border: solid 2px transparent;
+   background-clip: padding-box;
+  box-shadow: 10px 10px 10px  rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(50px);
+  border-top:1px solid rgba(255, 255, 255,0.5);
+   border-bottom:1px solid rgba(255, 255, 255,0.5);
+    border-left:1px solid rgba(255, 255, 255,0.5); 
+	border-right:1px solid rgba(255, 255, 255,0.5);
+	backdrop-filter:blur(5px);
+  overflow:hidden;
+  cursor: pointer;
+}
+
+.glass-morphism-container-hover-effect::before{
+  --size: 0;
+    content: '';
+    position: absolute;
+    left: var(--x);
+    top: var(--y);
+    width: var(--size);
+    height: var(--size);
+    background: radial-gradient(circle closest-side, rgba(255, 255, 255,0.2), transparent);
+    transform: translate(-50%, -50%);
+    transition: width .2s ease, height .2s ease;
+}
+
+.glass-morphism-container-hover-effect:hover::before{
+  --size: 400px;
+}
+
+
+
+
+</style>
+<div class="main-container">
+  
+  <div class="sub-container">
+    
+    <div class="glass-morphism-container-hover-effect">
+        <h2 class="text-styling">Glass Morphism</h2>
+      <p>Effect on hover </p>
+    </div>
+    
+    <div class="glass-morphism-container1">
+        <h2 class="text-styling">Glass Morphism</h2>
+        <p>Blur: 40px , Opacity: 0.2 </p>
+    </div>
+    
+    <div class="glass-morphism-container2">
+        <h2 class="text-styling">Glass Morphism</h2>
+      <p>Blur: 30px , Opacity: 0.5 </p>
+    </div>
+    
+    <div class="glass-morphism-container3">
+        <h2 class="text-styling">Glass Morphism</h2>
+      <p>Blur: 50px , Opacity: 0.6 </p>
+    </div>
+    
+    
+    
+  </div>
+  
+</div>
+<script>document.querySelector('.glass-morphism-container-hover-effect').onmousemove = (e) => {
+  const x = e.pageX - e.target.offsetLeft
+  const y = e.pageY - e.target.offsetTop
+  e.target.style.setProperty('--x', `${ x }px`)
+  e.target.style.setProperty('--y', `${ y }px`)
+ 
+}</script>
+
+
